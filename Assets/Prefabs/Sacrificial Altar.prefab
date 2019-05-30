@@ -144,6 +144,8 @@ MonoBehaviour:
   sacrificeTime: 3
   progressBar: {fileID: 6207804967346147964}
   spriteRenderer: {fileID: 4379554991527273263}
+  itemDeleteParticle: {fileID: 4653827466564187162, guid: 11b0f8d2ec05bd544a56af2a844c2471,
+    type: 3}
 --- !u!1001 &3133912666082400575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,31 +153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4379554992928592795}
     m_Modifications:
-    - target: {fileID: 1939503487089656367, guid: 27ab60729251b604b9263c384b1cd280,
-        type: 3}
-      propertyPath: m_Name
-      value: ProgressBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 1939503487089656367, guid: 27ab60729251b604b9263c384b1cd280,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 654731931251558557, guid: 27ab60729251b604b9263c384b1cd280,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 775216819561270554, guid: 27ab60729251b604b9263c384b1cd280,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 775216819561270554, guid: 27ab60729251b604b9263c384b1cd280,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 8204413320740638406, guid: 27ab60729251b604b9263c384b1cd280,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -230,6 +207,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939503487089656367, guid: 27ab60729251b604b9263c384b1cd280,
+        type: 3}
+      propertyPath: m_Name
+      value: ProgressBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939503487089656367, guid: 27ab60729251b604b9263c384b1cd280,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 775216819561270554, guid: 27ab60729251b604b9263c384b1cd280,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 775216819561270554, guid: 27ab60729251b604b9263c384b1cd280,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 654731931251558557, guid: 27ab60729251b604b9263c384b1cd280,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ab60729251b604b9263c384b1cd280, type: 3}

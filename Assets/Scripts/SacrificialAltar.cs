@@ -8,11 +8,11 @@ public class SacrificialAltar : MonoBehaviour
 
     public ProgressBar progressBar;
     public SpriteRenderer spriteRenderer;
+    public ParticleSystem itemDeleteParticle;
 
     List<ItemEntity> currentItems = new List<ItemEntity>();
     float timeSinceLastDrop = 0;
     private Vector3 targetDirection;
-
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +54,10 @@ public class SacrificialAltar : MonoBehaviour
 
                 foreach (ItemEntity item in currentItems)
                 {
+                    ParticleSystem partSys = Instantiate(itemDeleteParticle, item.transform.position, Quaternion.identity);
+                    ParticleSystem.ShapeModule shape = partSys.shape;
+                    shape.texture = item.data.texture;
+                    Destroy(partSys.gameObject, partSys.main.duration);
                     Destroy(item.gameObject);
                 }
                 currentItems.Clear();

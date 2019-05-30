@@ -16,6 +16,8 @@ public class RequestDisplayManager : MonoBehaviour
     void Update()
     {
         float prefabHeight = requestDisplayPrefab.GetComponent<RectTransform>().rect.height;
+
+        displays.Sort(new System.Comparison<RequestDisplay>((d1, d2) => { return d1.request.remainingTime.CompareTo(d2.request.remainingTime); }));
         for (int i = 0; i < displays.Count; i++)
         {
             RequestDisplay display = displays[i];

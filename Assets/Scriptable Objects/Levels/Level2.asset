@@ -20,3 +20,5 @@ MonoBehaviour:
   difficulty: 1.5
   requestCount: 10
   starThresholds: c4090000b80b0000a00f0000
+  structurePrefab: {fileID: 7528245120360325446, guid: 519af16e40c4510448091d8ab637e39e,
+    type: 3}

@@ -13,4 +13,6 @@ public class LevelData : ScriptableObject
     public int requestCount = 10;
     public int[] starThresholds = { 100, 200, 300 };
 
+    public LevelStructure structurePrefab;
+
 }

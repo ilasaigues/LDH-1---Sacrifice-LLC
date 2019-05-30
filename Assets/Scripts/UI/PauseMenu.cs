@@ -40,16 +40,19 @@ public class PauseMenu : MonoBehaviour
 
     public void Retry()
     {
+        TimeManager.paused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit2Menu()
     {
+        TimeManager.paused = false;
         SceneManager.LoadScene(0);
     }
 
     public void Quit2Desktop()
     {
+        TimeManager.paused = false;
         Application.Quit();
     }
 }

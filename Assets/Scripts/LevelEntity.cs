@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelEntity : Singleton<LevelEntity>
 {
+    public static LevelData nextLevelData;
     public LevelData levelData;
 
     public List<Transform> spawnLocations;
@@ -18,8 +19,18 @@ public class LevelEntity : Singleton<LevelEntity>
     public System.Action<int> OnSuccess = (score) => { };
 
 
+    private void Awake()
+    {
+        if (nextLevelData != null)
+            levelData = nextLevelData;
+    }
+
     void Start()
     {
+
+        LoadLevelFromData();
+
+
         ErrorCheck();
 
         foreach (SpawnerData spawnData in levelData.availableSpawners)
@@ -41,6 +52,30 @@ public class LevelEntity : Singleton<LevelEntity>
         Instantiate(altarPrefab, altarLocations[Random.Range(0, altarLocations.Count)].position, Quaternion.identity);
         RequestSystem.Instance.OnFinishedRequestsCountUpdate += FinishedRequestsCountUpdated;
         ScoreManager.Instance.OnReputationUpdate += ReputationUpdated;
+    }
+
+    private void LoadLevelFromData()
+    {
+        if (levelData == null) throw new System.Exception("No leveldata provided on level load");
+        else
+        {
+            LevelStructure structure = Instantiate(levelData.structurePrefab);
+            spawnLocations = new List<Transform>();
+            foreach (Transform child in structure.spawnerContainer.transform)
+            {
+                spawnLocations.Add(child);
+            }
+            processorLocations = new List<Transform>();
+            foreach (Transform child in structure.processorContainer.transform)
+            {
+                processorLocations.Add(child);
+            }
+            altarLocations = new List<Transform>();
+            foreach (Transform child in structure.altarContainer.transform)
+            {
+                altarLocations.Add(child);
+            }
+        }
     }
 
     void ErrorCheck()

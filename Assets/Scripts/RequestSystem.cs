@@ -89,6 +89,11 @@ public class RequestSystem : Singleton<RequestSystem>
             }
         }
 
+        foreach (var pair in allAvailableItems)
+        {
+            print(pair.Key.name);
+        }
+
         LevelEntity.Instance.OnDefeat += OnGameOver;
         LevelEntity.Instance.OnSuccess += OnGameOver;
 
@@ -150,6 +155,11 @@ public class RequestSystem : Singleton<RequestSystem>
         List<ItemData> result = new List<ItemData>();
 
         int targetWeight = Random.Range(1, maxWeight + 1);
+        if (targetWeight == lastRequestWeight)
+        {
+            if (lastRequestWeight == 1) targetWeight = lastRequestWeight + 1;
+            else targetWeight = lastRequestWeight - 1;
+        }
         lastRequestWeight = targetWeight;
         List<ItemData> usableItems = ItemsAffordedWith(targetWeight);
         while (targetWeight > 0)

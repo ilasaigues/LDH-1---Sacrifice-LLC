@@ -6,7 +6,7 @@ public class RequestDisplay : MonoBehaviour
 {
     public UIProgressBar progressBar;
     public List<Image> displays = new List<Image>();
-    private RequestSystem.Request request;
+    public RequestSystem.Request request;
 
     public void Initialize(RequestSystem.Request newRequest)
     {

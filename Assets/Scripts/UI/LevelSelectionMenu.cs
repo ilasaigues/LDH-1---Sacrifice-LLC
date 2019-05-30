@@ -23,9 +23,10 @@ public class LevelSelectionMenu : MonoBehaviour
         }
     }
 
-    public void GoToScene(int scene)
+    public void GoToScene(LevelData levelData)
     {
-        SceneManager.LoadScene(scenes[scene]);
+        LevelEntity.nextLevelData = levelData;
+        SceneManager.LoadScene(1);
     }
 
     public void OnButtonHover(LevelData levelData)
