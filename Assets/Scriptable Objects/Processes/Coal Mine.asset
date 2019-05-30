@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db3b5fc95f9e5a47a82cd1bf7b7f75c, type: 3}
+  m_Name: Coal Mine
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: f1281fc3450d5c44fb0c9aebf2f87efd, type: 3}
+  recipes:
+  - input: {fileID: 11400000, guid: 01180c291bf09234d85ec30f44aff17e, type: 2}
+    output: {fileID: 11400000, guid: c4b74312e2555bd41a0443a7401b7889, type: 2}
+    time:
+      refType: 1
+      reference: {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+      localValue: 0
+  - input: {fileID: 11400000, guid: 2ecdeaacaf468284ca36639534a3cd21, type: 2}
+    output: {fileID: 11400000, guid: 37b538a28c47dad428b38b4d2d1ebf38, type: 2}
+    time:
+      refType: 1
+      reference: {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+      localValue: 0
+  - input: {fileID: 11400000, guid: 992a05d68ce7da84ab94eddc135da0dc, type: 2}
+    output: {fileID: 11400000, guid: 1540bf73acdb80548b7424e1df4720ec, type: 2}
+    time:
+      refType: 1
+      reference: {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+      localValue: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cf786d96c420b4abda14bb42d37138, type: 3}
+  m_Name: Level6
+  m_EditorClassIdentifier: 
+  availableSpawners:
+  - {fileID: 11400000, guid: c7795b512c4aa75458a63ab4be1c24c5, type: 2}
+  - {fileID: 11400000, guid: d219334271621564598f12897adb6fa9, type: 2}
+  - {fileID: 11400000, guid: 017bacb196943bc4ea6c1b3e87290f46, type: 2}
+  - {fileID: 11400000, guid: fefdeb0264588bd4cb5a057967c5597b, type: 2}
+  availableProcessors:
+  - {fileID: 11400000, guid: e30a8b93c7de9bb4eb08e0a56b5203ed, type: 2}
+  - {fileID: 11400000, guid: c3a548181c7c7454db0cce29682b0c7b, type: 2}
+  - {fileID: 11400000, guid: 064f3cd46549d8c45a3decbc57343532, type: 2}
+  difficulty: 3
+  requestCount: 25
+  starThresholds: 10270000c8320000803e0000

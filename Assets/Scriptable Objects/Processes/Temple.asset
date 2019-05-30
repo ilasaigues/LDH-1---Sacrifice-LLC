@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db3b5fc95f9e5a47a82cd1bf7b7f75c, type: 3}
+  m_Name: Temple
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: d01dcb29adfdfe043a5c715a34b9dba8, type: 3}
+  recipes:
+  - input: {fileID: 11400000, guid: 992a05d68ce7da84ab94eddc135da0dc, type: 2}
+    output: {fileID: 11400000, guid: 3b45dcded6bbdf343a5098cea648f930, type: 2}
+    time:
+      refType: 1
+      reference: {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+      localValue: 0
+  - input: {fileID: 11400000, guid: 2ecdeaacaf468284ca36639534a3cd21, type: 2}
+    output: {fileID: 11400000, guid: 4e1b495f5dfb76d479ac5b326dee4dff, type: 2}
+    time:
+      refType: 1
+      reference: {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+      localValue: 0

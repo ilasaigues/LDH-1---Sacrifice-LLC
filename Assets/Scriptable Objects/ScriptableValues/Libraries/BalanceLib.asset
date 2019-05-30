@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2454ebe90f822140abf681d69b5d192, type: 3}
+  m_Name: BalanceLib
+  m_EditorClassIdentifier: 
+  values:
+  - {fileID: 11400000, guid: ef461d61764d9de47bb424c26624ded5, type: 2}
+  - {fileID: 11400000, guid: e8da0d88fc1b0ab45ba4be68e5a518b5, type: 2}
+  - {fileID: 11400000, guid: cf59434b5ecacb840baca49d96080b23, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: c26c8a5805d5da94f9af9e05d9e367dd, type: 2}
+  - {fileID: 11400000, guid: 39432550c10641047a49ac02784a6fde, type: 2}
+  - {fileID: 11400000, guid: 99f1e52ad9125534791f3fffbff501b9, type: 2}
