@@ -10,9 +10,6 @@ public class ScoreManager : Singleton<ScoreManager>
 
     public FloatReference reputationGainMult;
     public FloatReference reputationLossMult;
-
-    public float AAAreputationGainMult = 2;
-    public float AAAreputationLossMult = 3;
     public int score { get; private set; }
 
 
@@ -36,12 +33,12 @@ public class ScoreManager : Singleton<ScoreManager>
             AddScore(GetScoreFromWeight(request.weight));
             float timeMult = (request.remainingTime / request.startTime) + 0.5f;
 
-            reputation = Mathf.Clamp(reputation + request.weight * timeMult * AAAreputationGainMult, 0, 100);
+            reputation = Mathf.Clamp(reputation + request.weight * timeMult * reputationGainMult.Value, 0, 100);
             fulfilled++;
         }
         else
         {
-            reputation -= request.weight * AAAreputationLossMult;
+            reputation -= request.weight * reputationLossMult.Value;
             failed++;
         }
         OnRequestCountUpdate(fulfilled, failed);
