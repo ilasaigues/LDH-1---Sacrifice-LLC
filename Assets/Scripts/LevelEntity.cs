@@ -110,6 +110,7 @@ public class LevelEntity : Singleton<LevelEntity>
         if (requests >= levelData.requestCount)
         {
             OnSuccess(ScoreManager.Instance.score);
+            Director.GetManager<SoundManager>().winSound.Play();
             HighScoreManager.SaveNewHighScore(levelData, ScoreManager.Instance.score);
         }
     }

@@ -7,14 +7,17 @@ public class SoundManager : AbstractManager
 
     public AudioMixer mixer;
     // Start is called before the first frame update
+    public AudioSource sacrificeSound;
+    public AudioSource winSound;
+    public AudioSource combineSound;
+
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         mixer.SetFloat("MasterAttenuation", SoundOn ? 0 : -80);
     }
 
-    static string KEY_SOUND_ENABLED = "SoundEnabled";
-
+    static string KEY_SOUND_ENABLED = "SoundEnabled";  
 
     public bool SoundOn
     {

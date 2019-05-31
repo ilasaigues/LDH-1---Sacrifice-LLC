@@ -62,7 +62,7 @@ public static class Director
         if (!managers.Contains(newManager))
         {
             managers.Add(newManager);
-            Debug.Log("New manager subscribed, type " + t);
+            Debug.Log("New manager subscribed, name: " + newManager.gameObject.name);
         }
     }
 }

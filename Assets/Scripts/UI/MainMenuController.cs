@@ -26,6 +26,7 @@ public class MainMenuController : MonoBehaviour
     {
         SetButtonsInteractable(false);
         helpMenu.gameObject.SetActive(true);
+        helpMenu.PrevPage();
     }
 
     void OnMenuClose()

@@ -39,7 +39,7 @@ public class SacrificialAltar : MonoBehaviour
                     if (request.SatisfiedBy(currentItems))
                     {
                         satisfiesSomething = true;
-                        request.satisfied = true;//TODO: THIS IS WHERE YOU ADD SCORES AND STUFF
+                        request.satisfied = true;
                         break;
                     }
                 }
@@ -60,6 +60,8 @@ public class SacrificialAltar : MonoBehaviour
                     Destroy(partSys.gameObject, partSys.main.duration);
                     Destroy(item.gameObject);
                 }
+
+                Director.GetManager<SoundManager>().sacrificeSound.Play();
                 currentItems.Clear();
                 progressBar.Visible(false);
                 timeSinceLastDrop = 0;

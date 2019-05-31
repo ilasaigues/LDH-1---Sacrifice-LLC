@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
     public void Quit2Menu()
     {
         TimeManager.paused = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Quit2Desktop()

@@ -57,6 +57,7 @@ public class ItemEntity : AbstractSpriteEntity<ItemData>
                     CombinationManager.Instance.GetItemInstance(comboData, (item.transform.position + transform.position) / 2);
                     Destroy(item.gameObject);
                     Destroy(this.gameObject);
+                    Director.GetManager<SoundManager>().combineSound.Play();
                     return;
                 }
             }
