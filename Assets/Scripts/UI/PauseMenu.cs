@@ -9,14 +9,26 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        LevelEntity.Instance.OnDefeat += OnDefeat;
+        LevelEntity.Instance.OnSuccess += OnSuccess;
     }
 
-    bool pressing = false;
 
+    bool pressing = false;
+    bool gameOver = false;
+    void OnDefeat()
+    {
+        gameOver = true;
+    }
+
+    void OnSuccess(int score)
+    {
+        gameOver = true;
+    }
     // Update is called once per frame
     void Update()
     {
+        if (gameOver) return;
         if (Input.GetAxis("Cancel") > Mathf.Epsilon)
         {
             if (!pressing)

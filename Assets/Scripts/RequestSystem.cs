@@ -89,11 +89,6 @@ public class RequestSystem : Singleton<RequestSystem>
             }
         }
 
-        foreach (var pair in allAvailableItems)
-        {
-            print(pair.Key.name);
-        }
-
         LevelEntity.Instance.OnDefeat += OnGameOver;
         LevelEntity.Instance.OnSuccess += OnGameOver;
 

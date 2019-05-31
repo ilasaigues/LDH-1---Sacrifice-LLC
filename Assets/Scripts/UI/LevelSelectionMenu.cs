@@ -13,6 +13,7 @@ public class LevelSelectionMenu : MonoBehaviour
 
     public System.Action OnClose = () => { };
 
+    const string GAMEPLAY_SCENE_NAME = "Gameplay";
 
     private void Update()
     {
@@ -26,7 +27,7 @@ public class LevelSelectionMenu : MonoBehaviour
     public void GoToScene(LevelData levelData)
     {
         LevelEntity.nextLevelData = levelData;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(GAMEPLAY_SCENE_NAME);
     }
 
     public void OnButtonHover(LevelData levelData)
